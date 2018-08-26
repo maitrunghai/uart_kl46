@@ -1,0 +1,217 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                24/Aug/2018  14:28:14
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  D:\Fresher\Embedded\uart\project\Debug\Exe\LedBlinking.out
+#    Map file     =  
+#        D:\Fresher\Embedded\uart\project\Debug\List\LedBlinking.map
+#    Command line =  
+#        D:\Fresher\Embedded\uart\project\Debug\Obj\KL46z.o
+#        D:\Fresher\Embedded\uart\project\Debug\Obj\main.o
+#        D:\Fresher\Embedded\uart\project\Debug\Obj\startup_MKL46Z4.o
+#        D:\Fresher\Embedded\uart\project\Debug\Obj\system_MKL46Z4.o -o
+#        D:\Fresher\Embedded\uart\project\Debug\Exe\LedBlinking.out --map
+#        D:\Fresher\Embedded\uart\project\Debug\List\LedBlinking.map --config
+#        D:\Setup\IAR\arm\config\linker\NXP\MKL46Z256xxx4.icf --semihosting
+#        --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x000003ff] |
+                [from 0x00000410 to 0x0003ffff] { ro };
+"P3":  place in [from 0x1fffe000 to 0x1fffffff] |
+                [from 0x20000000 to 0x20005fff] { rw, block CSTACK, block HEAP };
+"P5":  place in [from 0x00000400 to 0x0000040f] { section FlashConfig };
+initialize by copy { rw };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A0":                                      0xc0
+  .intvec            ro code  0x00000000   0xc0  startup_MKL46Z4.o [1]
+                            - 0x000000c0   0xc0
+
+"P1", part 1 of 2:                          0x4
+  .rodata            const    0x000000c0    0x0  copy_init3.o [4]
+  Initializer bytes  const    0x000000c0    0x4  <for P3 s0>
+                            - 0x000000c4    0x4
+
+"P5":                                      0x10
+  FlashConfig        ro code  0x00000400   0x10  startup_MKL46Z4.o [1]
+                            - 0x00000410   0x10
+
+"P1", part 2 of 2:                        0x692
+  .text              ro code  0x00000410  0x2c4  KL46z.o [1]
+  .text              ro code  0x000006d4  0x19c  system_MKL46Z4.o [1]
+  .text              ro code  0x00000870   0xae  I32DivModFast.o [4]
+  .text              ro code  0x0000091e    0x2  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000920    0x2  IntDivZer.o [4]
+  .text              ro code  0x00000922   0x30  copy_init3.o [4]
+  .text              ro code  0x00000952    0x2  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000954   0x28  main.o [1]
+  .text              ro code  0x0000097c   0x28  data_init.o [4]
+  .text              ro code  0x000009a4   0x24  startup_MKL46Z4.o [1]
+  .iar.init_table    const    0x000009c8   0x14  - Linker created -
+  .text              ro code  0x000009dc   0x1a  cmain.o [4]
+  .text              ro code  0x000009f6    0x4  low_level_init.o [3]
+  .text              ro code  0x000009fa    0x8  exit.o [3]
+  .text              ro code  0x00000a02    0x2  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a04    0xa  cexit.o [4]
+  .text              ro code  0x00000a0e    0x2  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a10   0x14  exit.o [5]
+  .rodata            const    0x00000a24   0x10  main.o [1]
+  .text              ro code  0x00000a34    0xc  cstartup_M.o [4]
+  .text              ro code  0x00000a40    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a48    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a50    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a58    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a60    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a68    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a70    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a78    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a80    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a88    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a90    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000a98    0x8  startup_MKL46Z4.o [1]
+  .text              ro code  0x00000aa0    0x2  startup_MKL46Z4.o [1]
+                            - 0x00000aa2  0x692
+
+"P3", part 1 of 2:                          0x4
+  P3 s0                       0x1fffe000    0x4  <Init block>
+    .data            inited   0x1fffe000    0x4  system_MKL46Z4.o [1]
+                            - 0x1fffe004    0x4
+
+"P3", part 2 of 2:                        0x800
+  CSTACK                      0x1fffe008  0x800  <Block>
+    CSTACK           uninit   0x1fffe008  0x800  <Block tail>
+                            - 0x1fffe808  0x800
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+          0x000000c0   0x4
+    1 destination range, total size 0x4:
+          0x1fffe000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module             ro code  ro data  rw data
+    ------             -------  -------  -------
+D:\Fresher\Embedded\uart\project\Debug\Obj: [1]
+    KL46z.o                708
+    main.o                  40       16
+    startup_MKL46Z4.o      350
+    system_MKL46Z4.o       412        4        4
+    --------------------------------------------
+    Total:               1 510       20        4
+
+command line: [2]
+    --------------------------------------------
+    Total:
+
+dl6M_tln.a: [3]
+    exit.o                   8
+    low_level_init.o         4
+    --------------------------------------------
+    Total:                  12
+
+rt6M_tl.a: [4]
+    I32DivModFast.o        174
+    IntDivZer.o              2
+    cexit.o                 10
+    cmain.o                 26
+    copy_init3.o            48
+    cstartup_M.o            12
+    data_init.o             40
+    --------------------------------------------
+    Total:                 312
+
+shb_l.a: [5]
+    exit.o                  20
+    --------------------------------------------
+    Total:                  20
+
+    Linker created                   20    2 048
+------------------------------------------------
+    Grand Total:         1 854       40    2 052
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x000009c8          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x000009dc          --   Gb  - Linker created -
+?main                   0x000009dd         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x1fffe008          --   Gb  - Linker created -
+CSTACK$$Limit           0x1fffe808          --   Gb  - Linker created -
+Region$$Table$$Base     0x000009c8          --   Gb  - Linker created -
+Region$$Table$$Limit    0x000009dc          --   Gb  - Linker created -
+SystemCoreClock         0x1fffe000    0x4  Data  Gb  system_MKL46Z4.o [1]
+SystemCoreClockUpdate   0x000006dd  0x160  Code  Gb  system_MKL46Z4.o [1]
+SystemInit              0x000006d5    0x8  Code  Gb  system_MKL46Z4.o [1]
+UART0_IRQHandler        0x0000066b   0x10  Code  Gb  KL46z.o [1]
+__Vectors               0x00000000          --   Gb  startup_MKL46Z4.o [1]
+__Vectors_End           0x000000c0         Data  Gb  startup_MKL46Z4.o [1]
+__Vectors_Size {Abs}    0x000000c0          --   Gb  startup_MKL46Z4.o [1]
+__aeabi_idiv0           0x00000921         Code  Gb  IntDivZer.o [4]
+__aeabi_uidiv           0x00000871         Code  Gb  I32DivModFast.o [4]
+__aeabi_uidivmod        0x00000871         Code  Gb  I32DivModFast.o [4]
+__cmain                 0x000009dd         Code  Gb  cmain.o [4]
+__exit                  0x00000a11   0x14  Code  Gb  exit.o [5]
+__iar_copy_init3        0x00000923   0x30  Code  Gb  copy_init3.o [4]
+__iar_data_init3        0x0000097d   0x28  Code  Gb  data_init.o [4]
+__iar_program_start     0x00000a35         Code  Gb  cstartup_M.o [4]
+__low_level_init        0x000009f7    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000         Data  Gb  startup_MKL46Z4.o [1]
+__vector_table_0x1c     0x0000001c         Data  Gb  startup_MKL46Z4.o [1]
+_call_main              0x000009e9         Code  Gb  cmain.o [4]
+_exit                   0x00000a05         Code  Gb  cexit.o [4]
+_main                   0x000009f3         Code  Gb  cmain.o [4]
+clock_config            0x00000471   0x34  Code  Gb  KL46z.o [1]
+exit                    0x000009fb    0x8  Code  Gb  exit.o [3]
+init_led                0x00000411   0x60  Code  Gb  KL46z.o [1]
+led_off                 0x0000061b   0x20  Code  Gb  KL46z.o [1]
+main                    0x00000955   0x28  Code  Gb  main.o [1]
+uart0_config            0x000004a5  0x176  Code  Gb  KL46z.o [1]
+usart_send_byte         0x0000063b   0x10  Code  Gb  KL46z.o [1]
+usart_send_string       0x00000655   0x16  Code  Gb  KL46z.o [1]
+
+
+[1] = D:\Fresher\Embedded\uart\project\Debug\Obj
+[2] = command line
+[3] = dl6M_tln.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+  1 854 bytes of readonly  code memory
+     40 bytes of readonly  data memory
+  2 052 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

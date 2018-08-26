@@ -1,0 +1,15 @@
+"D:\Setup\IAR\arm\bin\armproc.dll" 
+
+"D:\Setup\IAR\arm\bin\armjlink2.dll" 
+
+"D:\Fresher\Embedded\uart\project\Debug\Exe\LedBlinking.out" 
+
+--plugin "D:\Setup\IAR\arm\bin\armbat.dll" 
+
+--device_macro "D:\Setup\IAR\arm\config\debugger\NXP\KLxx.dmac" 
+
+--flash_loader "D:\Setup\IAR\arm\config\flashloader\NXP\FlashKLxx256K.board" 
+
+
+
+
